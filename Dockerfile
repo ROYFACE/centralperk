@@ -18,7 +18,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN set -ex && cd ~ && \
         sudo apt-get update && \
         sudo apt-get install -y \
-                mysql-client && \
+                mariadb-client && \
         sudo apt-get clean -y
 
 # Install Chrome
