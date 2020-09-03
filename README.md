@@ -9,7 +9,7 @@ It is used on CircleCI, but it should works on every Docker host.
 
 ## Content
 The [CentraPerk](https://hub.docker.com/r/monicahq/circleci-docker-centralperk/) image contains:
-* circleci/php:7.2-node-browsers image
+* circleci/php:7.4-node-browsers image
 * mysql client
 * latest Chrome browser
 * Needed php extensions
