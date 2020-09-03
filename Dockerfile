@@ -7,10 +7,10 @@ ARG VCS_REF
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="Monica CircleCI Tests Docker Image" \
       org.label-schema.description="Monica custom-built docker image for CircleCI 2.0 jobs. Includes all tools needed to test monica." \
-      org.label-schema.url="https://monicahq.com" \
+      org.label-schema.url="https://royface.co.jp" \
       org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/monicahq/centralperk" \
-      org.label-schema.vendor="Monica" \
+      org.label-schema.vcs-url="https://github.com/ROYFACE/centralperk" \
+      org.label-schema.vendor="ROYFACE" \
       org.label-schema.version=$VCS_REF \
       org.label-schema.schema-version="1.0"
 
@@ -34,7 +34,7 @@ RUN set -ex && cd ~ && \
 RUN set -ex && cd ~ && \
         sudo apt-get install -y libpng-dev libxml2-dev libfreetype6-dev libjpeg62-turbo-dev && \
         sudo apt-get clean -y && \
-        sudo docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+        sudo docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
         sudo docker-php-ext-install -j$(nproc) \
                 json \
                 iconv \
