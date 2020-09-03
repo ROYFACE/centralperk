@@ -1,5 +1,5 @@
 # CircleCI primary docker image to run within
-FROM circleci/php:7.2-apache-node-browsers
+FROM circleci/php:7.4-apache-node-browsers
 
 # Build-time metadata as defined at http://label-schema.org
 ARG BUILD_DATE
